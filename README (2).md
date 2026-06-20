@@ -1,12 +1,8 @@
 # 🎬 MovieLens Analytics Pipeline with Apache Spark & Cassandra
 
-> A scalable big data analytics pipeline built using **Apache Spark** and **Apache Cassandra** to process and analyze the MovieLens 100K dataset.
-
 ## 📌 Project Overview
 
-This project was developed for **STQD6324 Data Management (Semester 2, 2025/2026)**.
-
-The objective is to design and implement a distributed data processing pipeline capable of ingesting, transforming, storing, and analyzing movie rating data using modern big data technologies.
+The objective is to design and implement a distributed data processing pipeline capable of ingesting, transforming, storing and analyzing movie rating data using modern big data technologies.
 
 The pipeline leverages:
 
@@ -51,49 +47,10 @@ MovieLens Dataset
 
 ---
 
-## 🎯 Analytical Tasks
-
-### 1. Average Rating for Each Movie
-Calculate the mean rating received by every movie in the dataset.
-
-### 2. Top 10 Highest-Rated Movies
-Identify the ten movies with the highest average ratings based on user reviews.
-
-### 3. Favourite Genre Analysis
-Determine users who:
-- Rated at least 50 movies
-- Identify their favourite genre based on the genre they rated most frequently
-
-### 4. Users Below 20 Years Old
-Retrieve all users whose age is less than 20.
-
-### 5. Scientists Aged 30–40
-Retrieve users:
-- Occupation = Scientist
-- Age between 30 and 40 years
-
----
-
-## 🛠️ Technologies Used
-
-| Technology | Purpose |
-|------------|----------|
-| Python | Programming Language |
-| Apache Spark | Distributed Data Processing |
-| Spark SQL | Analytical Queries |
-| Apache Cassandra | NoSQL Database |
-| HDFS | Distributed Storage |
-| Jupyter Notebook | Development Environment |
-
----
-
 ## 📂 Repository Structure
 
 ```text
 MovieLens-Spark-Cassandra/
-│
-├── notebook/
-│   └── movielens_report.ipynb
 ├── scripts/
 │   └── movielens.py
 ├── screenshots/
@@ -110,25 +67,12 @@ MovieLens-Spark-Cassandra/
 
 ### Prerequisites
 
-- Python 3.x
-- Apache Spark
-- Apache Cassandra
-- Java JDK 8+
-- Hadoop / HDFS
-
----
-
-## 🚀 Running the Project
-
-```bash
-spark-submit movielens.py
-```
-
-Or run the notebook:
-
-```bash
-jupyter notebook movielens_report.ipynb
-```
+| Component | Version |
+|------------|------------|
+| Python | 2.7.5 |
+| Apache Spark | 2.3.0.2.6.5.0-292 |
+| Apache Cassandra | 3.0.9 |
+| Hadoop / HDFS | Hadoop Distributed File System (HDFS) |
 
 ---
 
@@ -147,39 +91,22 @@ jupyter notebook movielens_report.ipynb
 
 ## 📈 Results Summary
 
-| Task | Description |
-|--------|------------|
-| Task 1 | Average rating of every movie |
-| Task 2 | Top 10 highest-rated movies |
-| Task 3 | Favourite genre analysis for active users |
-| Task 4 | Users below age 20 |
-| Task 5 | Scientists aged 30–40 |
+1. Task 1 : Average rating of every movie
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/5b4db88a-044d-4c15-8418-8de8c0992264" />
+
+2. Task 2 : Top 10 highest-rated movies 
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/e90bfc50-75dd-4082-a265-d7d89df51dcc" />
+
+3. Task 3 : Favourite genre analysis for active users
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/a22c7d0d-d715-440b-a06f-062de549bb8f" />
+
+4. Task 4 : Users below age 20 
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/343428d5-0680-439e-a8fe-0f71013cd4f1" />
+
+5. Task 5 : Scientists aged 30–40 
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/8249c34c-bb8d-46b3-999d-306f6b38a51c" />
 
 ---
+## Conclusion
 
-## 🎓 Learning Outcomes
-
-- Distributed data processing using Apache Spark
-- RDD and DataFrame transformations
-- Spark SQL analytics
-- Cassandra integration
-- Big data workflow development
-- Reproducible data engineering practices
-
----
-
-## 📚 References
-
-- MovieLens Dataset: https://grouplens.org/datasets/movielens/
-- Apache Spark Documentation: https://spark.apache.org/docs/latest/
-- Apache Cassandra Documentation: https://cassandra.apache.org/doc/latest/
-
----
-
-## 👨‍💻 Author
-
-**Sara**  
-STQD6324 Data Management  
-Semester 2, 2025/2026
-
-⭐ If you find this project useful, feel free to explore further enhancements such as MongoDB or HBase integration.
+This project successfully demonstrated the use of Apache Spark and Apache Cassandra to build a scalable data analytics pipeline using the MovieLens 100K dataset. The dataset was loaded, transformed, and analyzed through Spark RDDs and DataFrames, while Cassandra was used for efficient storage and retrieval of processed data. The analytical tasks, including movie rating analysis, user profiling, and genre preference identification, were successfully completed. Overall, the project highlights the effectiveness of big data technologies in processing large datasets and generating meaningful insights from user and movie rating data.
